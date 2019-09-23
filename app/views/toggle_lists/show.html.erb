@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @toggle_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @toggle_list.description %>
+</p>
+
+<div id="toggle_items_wrapper">
+  <%= render @toggle_list.toggle_items %>
+  <div is="form">
+    <%= render "toggle_items/form" %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_toggle_list_path(@toggle_list) %> |
+<%= link_to 'Back', toggle_lists_path %>
