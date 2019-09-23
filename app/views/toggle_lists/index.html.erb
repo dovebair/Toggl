@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Toggle Lists</h1>
+<h2>Your Toggles</h2>
 
 <table>
   <thead>
@@ -14,11 +14,11 @@
   <tbody>
     <% @toggle_lists.each do |toggle_list| %>
       <tr>
-        <td><%= toggle_list.title %></td>
+        <td><%= link_to toggle_list.title, toggle_list %></td>
         <td><%= toggle_list.description %></td>
-        <td><%= link_to 'Show', toggle_list %></td>
+        
         <td><%= link_to 'Edit', edit_toggle_list_path(toggle_list) %></td>
-        <td><%= link_to 'Destroy', toggle_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>

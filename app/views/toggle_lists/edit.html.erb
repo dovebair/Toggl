@@ -1,6 +1,7 @@
-<h1>Editing Toggle List</h1>
+<h2>Edit Your List</h2>
 
 <%= render 'form', toggle_list: @toggle_list %>
-
-<%= link_to 'Show', @toggle_list %> |
-<%= link_to 'Back', toggle_lists_path %>
+<%= link_to 'Delete', @toggle_list, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br><br>
+<%= link_to 'Back to List', @toggle_list %> |
+<%= link_to 'Back to Toggle Home', toggle_lists_path %>

@@ -1,2 +1,22 @@
-<p><%= toggle_item.content %></p>
-<%= link_to "Delete", toggle_list_toggle_item_path(@toggle_list, toggle_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="row clearfix">  
+  <% if toggle_item.completed? %>
+    
+     <div class="toggle_item">
+      <button type="button" class="btn btn-secondary"><p><h4><%= link_to toggle_item.content, uncomplete_toggle_list_toggle_item_path(@toggle_list, toggle_item.id), method: :patch %></h4></p></button>
+    </div>
+
+    <div class="trash">
+     <button type="button" input type="reset" class="btn btn-outline-danger"> <p class="font-weight-bold"><%=  link_to "Delete", toggle_list_toggle_item_path(@toggle_list, toggle_item.id), method: :delete, data: { confirm: "Are you sure?" } %></p></button>
+    </div>
+
+  <% else %>
+    <div class="toggle_item">
+      <button type="button" class="btn btn-outline-primary"><p><h4><%= link_to toggle_item.content, complete_toggle_list_toggle_item_path(@toggle_list, toggle_item.id), method: :patch %></h4></p></button>
+    </div>
+
+    <div class="trash">
+      <button type="button" class="btn btn-outline-danger"><p class="font-weight-bold"><%= link_to "Delete", toggle_list_toggle_item_path(@toggle_list, toggle_item.id), method: :delete, data: { confirm: "Are you sure?"} %></p></button>
+      </div>
+    <% end %>
+
+  </div> 

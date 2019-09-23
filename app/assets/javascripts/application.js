@@ -14,3 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+$(".toggle_item button").on("click", function(){
+  $(this).toggleClass("active");
+  return false
+})
+
+$().button('toggle')
