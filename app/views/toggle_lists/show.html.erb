@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h2><%= link_to @toggle_list.title, edit_toggle_list_path(@toggle_list) %></h2>
+  <h2>You Pushed The Button!</h2>
 </p>
 
 <p>
-  <strong><%= @toggle_list.description %></strong>  
+  <strong>Here are more buttons for you to push!</strong>  
 </p>
 
 <div id="toggle_items_wrapper">
-  <%= render @toggle_list.toggle_items %>
-  <div id="form">
-    <%= render "toggle_items/form" %>
-  </div>
+  <button type="button" class="btn btn-amber"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-amethyst"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-emerald"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-citrine"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-ruby"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-sapphire"><p><h4><%= link_to "Push Here" %></h4></p></button>
 </div>
 
 

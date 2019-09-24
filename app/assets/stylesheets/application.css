@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.btn-amethyst {background-color: #9E34D3;} /* Purple */
+.btn-amber {background-color: #F0A202;} /* Orange */
+.btn-emerald {background-color: #30A57A;} /* Green */
+.btn-citrine {background-color: #E3B505;} /* Yellow */ 
+.btn-ruby {background-color: #E01D1D;} /* Red */
+.btn-sapphire {background-color: #006AA8;} /* Blue */

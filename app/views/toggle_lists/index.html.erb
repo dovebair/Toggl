@@ -1,29 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Your Toggles</h2>
+<h2>Push the Button</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th>You've waited your entire life for this moment.</th>
     </tr>
   </thead>
 
   <tbody>
     <% @toggle_lists.each do |toggle_list| %>
       <tr>
-        <td><%= link_to toggle_list.title, toggle_list %></td>
-        <td><%= toggle_list.description %></td>
-        
-        <td><%= link_to 'Edit', edit_toggle_list_path(toggle_list) %></td>
-        
+        <td><button type="button" class="btn btn-outline-primary"><p><h4><%= link_to "Push Here", toggle_list %></h4></p></button></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Toggle List', new_toggle_list_path %>
