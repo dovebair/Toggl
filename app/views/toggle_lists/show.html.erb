@@ -1,22 +1,45 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h2>You Pushed The Button!</h2>
+  <h2>Welcome to Buttons!</h2>
 </p>
 
 <p>
-  <strong>Here are more buttons for you to push!</strong>  
+<% @toggle_list.toggle_items.each do |toggle_item| %>
+  <button type="button" class="btn <%= toggle_item.style %>">
+    <%= toggle_item.content %></button>
+ <% end %>
+</p>
+
+<p>
+  <strong>How about gemstone buttons?</strong>  
 </p>
 
 <div id="toggle_items_wrapper">
-  <button type="button" class="btn btn-amber"><p><h4><%= link_to "Push Here" %></h4></p></button>
-  <button type="button" class="btn btn-amethyst"><p><h4><%= link_to "Push Here" %></h4></p></button>
-  <button type="button" class="btn btn-emerald"><p><h4><%= link_to "Push Here" %></h4></p></button>
-  <button type="button" class="btn btn-citrine"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-kunzite"><p><h4><%= link_to "Push Here" %></h4></p></button>
   <button type="button" class="btn btn-ruby"><p><h4><%= link_to "Push Here" %></h4></p></button>
-  <button type="button" class="btn btn-sapphire"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-garnet"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-carnelian"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-amber"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-citrine"><p><h4><%= link_to "Push Here" %></h4></p></button>  
+    <button type="button" class="btn btn-peridot"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-emerald"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-aquamarine"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-sapphire"><p><h4><%= link_to "Push Here" %></h4></p></button>  
+  <button type="button" class="btn btn-amethyst"><p><h4><%= link_to "Push Here" %></h4></p></button>  
 </div>
+<br><br>
+<p>
+  <strong>Fancier buttons?</strong>  
+</p>
+
+<div id="toggle_items_wrapper">
+  <button type="button" class="btn btn-diamond"><p><h4><%= link_to "Push Here" %></h4></p></button>
+  <button type="button" class="btn btn-pearl"><p><h4><%= link_to "Push Here" %></h4></p></button>  
+  <button type="button" class="btn btn-onyx"><p><h4><%= link_to "Push Here" %></h4></p></button> 
+  </div>
+
+<div id="toggle_items_wrapper">
+    <button type="button" class="btn btn-success"><p><h4><%= link_to 'Back', toggle_lists_path %></h4></p></button>
 
 
-
-<%= link_to 'Back', toggle_lists_path %>

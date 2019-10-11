@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_190530) do
+ActiveRecord::Schema.define(version: 2019_10_11_213127) do
 
   create_table "toggle_items", force: :cascade do |t|
     t.string "content"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_190530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "completed_at"
+    t.string "style"
     t.index ["toggle_list_id"], name: "index_toggle_items_on_toggle_list_id"
   end
 

@@ -1,20 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <p id="notice" ><%= notice %></p>
 
-<h2>Push the Button</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>You've waited your entire life for this moment.</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @toggle_lists.each do |toggle_list| %>
+  <table class="center">
+    <thead>
       <tr>
-        <td><button type="button" class="btn btn-outline-primary"><p><h4><%= link_to "Push Here", toggle_list %></h4></p></button></td>
+        <h2>Welcome to Toggl</h2>
+        <th>You've waited your entire life for this moment.</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @toggle_lists.each do |toggle_list| %>
+        <tr>
+          <td><button type="button" class="btn btn-outline-primary displayed"><p><h4><%= link_to toggle_list, toggle_list %></h4></p></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 

@@ -1,6 +1,10 @@
 class ToggleItemsController < ApplicationController
   before_action :set_toggle_list
-  before_action :set_toggle_item, except: [:create]
+  before_action :set_toggle_item, except: [:create, :new]
+
+def new
+  @toggle_item = @toggle_list.toggle_items.build
+end
 
 def create
   @toggle_item = @toggle_list.toggle_items.create(toggle_item_params)
